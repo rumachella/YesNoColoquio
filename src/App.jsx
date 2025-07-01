@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import axios from "axios"
-import "./app.css"
+import "./App.css"
 
 export default function YesNoApp() {
   const [question, setQuestion] = useState("")
