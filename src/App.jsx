@@ -10,17 +10,17 @@ export default function YesNoApp() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const [showResponse, setShowResponse] = useState(false)
-  const [forcedAnswer, setForcedAnswer] = useState(null) // ✅ nuevo
+  const [forcedAnswer, setForcedAnswer] = useState(null) 
   const [showCustomGif, setShowCustomGif] = useState(false)
   const [customGif, setCustomGif] = useState(null)
-
+//                                        VALIDA Q SEA PREGUNTA, trim saca espacios en  blanco
   const validateQuestion = (text) => {
     const trimmed = text.trim()
     const spanishQuestion = /^¿.*\?$/.test(trimmed)
     const endsWithQuestion = trimmed.endsWith("?")
     return spanishQuestion || endsWithQuestion
   }
-
+  //                                              TRADUCIR RESPUESTAS
   const translateAnswer = (answer) => {
     const translations = {
       yes: "Sí",
@@ -47,7 +47,7 @@ export default function YesNoApp() {
     setLoading(true)
     setShowResponse(false)
     setResponse(null)
-
+    //                          FORZAR RESPUESTA
     try {
       const url = forcedAnswer
         ? `https://yesno.wtf/api?force=${forcedAnswer}`

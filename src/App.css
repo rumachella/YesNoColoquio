@@ -157,12 +157,20 @@ body {
 .response-container {
   opacity: 0;
   transform: translateY(20px);
+  display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
   transition: all 0.5s ease;
 }
 
 .response-container.show {
   opacity: 1;
   transform: translateY(0);
+      display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 .answer-text {
